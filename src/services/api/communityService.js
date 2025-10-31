@@ -1,9 +1,7 @@
-import communitiesData from "@/services/mockData/communities.json";
-import React from "react";
-import { create, getAll, getById, search, update } from "@/services/api/postService";
+import { getApperClient } from '@/services/apperClient';
 
 export class CommunityService {
-  static communities = [...communitiesData];
+static communities = [];
 
   static async search(query) {
     await new Promise(resolve => setTimeout(resolve, 300));
