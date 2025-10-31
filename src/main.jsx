@@ -1,12 +1,11 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
-import { AuthProvider } from '@/contexts/AuthContext'
-import { router } from '@/router'
-import { } from '@/index.css'
+import { Provider } from 'react-redux'
+import App from '@/App'
+import { store } from '@/store'
+import '@/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthProvider>
-    <RouterProvider router={router} />
-  </AuthProvider>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
